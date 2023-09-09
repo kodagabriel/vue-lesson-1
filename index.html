@@ -4,6 +4,16 @@
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title>Learning Vue</title>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <style>
+            .box {
+                padding: 100px 0;
+                width: 400px;
+                text-align: center;
+                background: #ddd;
+                margin: 20px;
+                display: inline-block;
+            }
+        </style>
     </head>
     <body>
         <h1>Hello world</h1>
@@ -18,9 +28,12 @@
                 <span v-else>show books</span>
             </button>
 
-            <div v-show="showBooks">
-                currently showing books
-            </div>
+            <br>
+
+            <div class="box" @mouseover="handleEvent($event)">mouseover (enter)</div>
+            <div class="box" @mouseleave="handleEvent">mouseleave</div>
+            <div class="box" @dblclick="handleEvent">double click</div>
+            <div class="box" @mousemove="handleMouseMove">position: {{ x }}  {{ y }} </div>
         </div>
         <script src="app.js"></script>
     </body>
