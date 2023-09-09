@@ -9,9 +9,10 @@
         <h1>Hello world</h1>
 
         <div id="app">
-            <h2>I am the template now</h2>
+            <p>{{ title }}  - {{ author }} - {{ age }}</p>
+            
+            <button v-on:click="age++">Increase age</button>
         </div>
-
         <script src="app.js"></script>
     </body>
 </html>
