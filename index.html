@@ -42,9 +42,9 @@
 
         <div id="app">
             <a :href="url">google!</a>
-            <div v-if="showBooks">
+            <div v-if="showBooks">  
                 <ul>
-                    <li @click="toggleFav(book)" v-for="book in books" :class="{ fav: book.isFav }">
+                    <li v-for="book in books" :class="{ fav: book.isFav }" @click="toggleFav(book)">
                         <img :src="book.img" :alt="book.title">
                         <h3>{{ book.title }}</h3>
                         <p> {{ book.author }} </p>
